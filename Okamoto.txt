@@ -1,1 +1,3 @@
 やっさんのアホーアホー
+
+http://www.textdrop.net/google-styleguide-ja/cppguide.xml
