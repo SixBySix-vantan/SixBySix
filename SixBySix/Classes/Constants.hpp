@@ -30,14 +30,41 @@
 //下
 #define WINDOW_BOTTOM (0)
 
+// 画面中央
+#define WINDOW_CENTER       (Vec2( WINDOW_RIGHT * 0.5f, WINDOW_TOP * 0.5f ))
+
 
 //================================================================================================
 //画像の登録
 //================================================================================================
+#define IMAGE_Field             "field.png"
+#define IMAGE_Field600          "field600x600.png"
+#define IMAGE_UI_CardsArea      "cardsArea.png"
+#define IMAGE_UI_Deck           "deck.png"
+#define IMAGE_UI_Hand           "hand.png"
+#define IMAGE_UI_Cemetery       "cemetery.png"
+
+#define IMAGE_UI_StatusesArea   "statusesArea.png"
+
+#define IMAGE_UI_DetailsArea    "details.png"
+
 
 //================================================================================================
 //音楽登録
 //================================================================================================
+
+
+// ===============================================================================================
+// 位置
+//================================================================================================
+#define Position_Field              (Vec2( WINDOW_RIGHT - 440, WINDOW_TOP - 300 ) )
+#define Position_CardsArea          (Vec2( WINDOW_RIGHT * 0.5f, 60.f ) )
+
+#define Position_DetailsArea        (Vec2( WINDOW_RIGHT * 0.5f - 310.f, WINDOW_TOP - 300.f ) )
+
+#define Position_P1_StatusesArea    (Vec2( 60.f, WINDOW_TOP - 300.f ) )
+#define Position_P2_StatusesArea    (Vec2( WINDOW_RIGHT - 60.f, WINDOW_TOP - 300.f ) )
+
 
 //================================================================================================
 //その他外部ファイル登録

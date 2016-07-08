@@ -90,7 +90,7 @@ public:
 class CChipAnimation : public CAnimation{
 protected:
     //参照するチップデータ
-    CChip *m_pChip = nullptr;
+    CChip *m_pChip = NULL;
     
 public:
     /**

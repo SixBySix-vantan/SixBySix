@@ -60,6 +60,30 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		A48D79221D30374B00582F53 /* CardsArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D79161D30374B00582F53 /* CardsArea.cpp */; };
+		A48D79231D30374B00582F53 /* CardUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D79181D30374B00582F53 /* CardUI.cpp */; };
+		A48D79241D30374B00582F53 /* DetailsArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D791B1D30374B00582F53 /* DetailsArea.cpp */; };
+		A48D79251D30374B00582F53 /* StatusesArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D791E1D30374B00582F53 /* StatusesArea.cpp */; };
+		A48D79261D30374B00582F53 /* UILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D79201D30374B00582F53 /* UILayer.cpp */; };
+		A48D79321D303B4900582F53 /* cardsArea.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792A1D303B4900582F53 /* cardsArea.png */; };
+		A48D79331D303B4900582F53 /* cemetery.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792B1D303B4900582F53 /* cemetery.png */; };
+		A48D79341D303B4900582F53 /* deck.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792C1D303B4900582F53 /* deck.png */; };
+		A48D79351D303B4900582F53 /* details.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792D1D303B4900582F53 /* details.png */; };
+		A48D79361D303B4900582F53 /* field600x600.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792E1D303B4900582F53 /* field600x600.png */; };
+		A48D79371D303B4900582F53 /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792F1D303B4900582F53 /* hand.png */; };
+		A48D79381D303B4900582F53 /* statusesArea.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D79301D303B4900582F53 /* statusesArea.png */; };
+		A48D79391D303D6300582F53 /* CardsArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D79161D30374B00582F53 /* CardsArea.cpp */; };
+		A48D793A1D303D6600582F53 /* CardUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D79181D30374B00582F53 /* CardUI.cpp */; };
+		A48D793B1D303D6900582F53 /* DetailsArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D791B1D30374B00582F53 /* DetailsArea.cpp */; };
+		A48D793C1D303D6C00582F53 /* UILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D79201D30374B00582F53 /* UILayer.cpp */; };
+		A48D793D1D303DA900582F53 /* StatusesArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48D791E1D30374B00582F53 /* StatusesArea.cpp */; };
+		A48D793E1D303E2C00582F53 /* cardsArea.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792A1D303B4900582F53 /* cardsArea.png */; };
+		A48D793F1D303E3000582F53 /* cemetery.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792B1D303B4900582F53 /* cemetery.png */; };
+		A48D79401D303E3300582F53 /* deck.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792C1D303B4900582F53 /* deck.png */; };
+		A48D79411D303E3600582F53 /* details.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792D1D303B4900582F53 /* details.png */; };
+		A48D79421D303E3900582F53 /* field600x600.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792E1D303B4900582F53 /* field600x600.png */; };
+		A48D79431D303E3D00582F53 /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D792F1D303B4900582F53 /* hand.png */; };
+		A48D79441D303E4100582F53 /* statusesArea.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D79301D303B4900582F53 /* statusesArea.png */; };
 		A494A7231D058577009DB531 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A494A7211D058577009DB531 /* Animation.cpp */; };
 		A494A7241D058577009DB531 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A494A7211D058577009DB531 /* Animation.cpp */; };
 		A4E464701D03392900842D31 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E4646E1D03392900842D31 /* GameMain.cpp */; };
@@ -172,6 +196,24 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A48D79131D30351400582F53 /* SixBySix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SixBySix.hpp; sourceTree = "<group>"; };
+		A48D79161D30374B00582F53 /* CardsArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardsArea.cpp; sourceTree = "<group>"; };
+		A48D79171D30374B00582F53 /* CardsArea.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CardsArea.hpp; sourceTree = "<group>"; };
+		A48D79181D30374B00582F53 /* CardUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardUI.cpp; sourceTree = "<group>"; };
+		A48D79191D30374B00582F53 /* CardUI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CardUI.hpp; sourceTree = "<group>"; };
+		A48D791B1D30374B00582F53 /* DetailsArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetailsArea.cpp; sourceTree = "<group>"; };
+		A48D791C1D30374B00582F53 /* DetailsArea.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DetailsArea.hpp; sourceTree = "<group>"; };
+		A48D791E1D30374B00582F53 /* StatusesArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusesArea.cpp; sourceTree = "<group>"; };
+		A48D791F1D30374B00582F53 /* StatusesArea.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StatusesArea.hpp; sourceTree = "<group>"; };
+		A48D79201D30374B00582F53 /* UILayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILayer.cpp; sourceTree = "<group>"; };
+		A48D79211D30374B00582F53 /* UILayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UILayer.hpp; sourceTree = "<group>"; };
+		A48D792A1D303B4900582F53 /* cardsArea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardsArea.png; sourceTree = "<group>"; };
+		A48D792B1D303B4900582F53 /* cemetery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cemetery.png; sourceTree = "<group>"; };
+		A48D792C1D303B4900582F53 /* deck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deck.png; sourceTree = "<group>"; };
+		A48D792D1D303B4900582F53 /* details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = details.png; sourceTree = "<group>"; };
+		A48D792E1D303B4900582F53 /* field600x600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = field600x600.png; sourceTree = "<group>"; };
+		A48D792F1D303B4900582F53 /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
+		A48D79301D303B4900582F53 /* statusesArea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusesArea.png; sourceTree = "<group>"; };
 		A494A7211D058577009DB531 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		A494A7221D058577009DB531 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
 		A4E4646E1D03392900842D31 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
@@ -320,6 +362,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A48D79271D303B4900582F53 /* Image */,
+				A48D79311D303B4900582F53 /* Sound */,
 				A4F9F5621D0BA376005CDC11 /* test.png */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
@@ -335,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E464761D0340A500842D31 /* Constants.hpp */,
+				A48D79131D30351400582F53 /* SixBySix.hpp */,
 				A4E464641D03390D00842D31 /* Data */,
 				A4E464681D03390D00842D31 /* Lib */,
 				A4E464691D03390D00842D31 /* Model */,
@@ -395,6 +440,84 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		A48D79141D30374B00582F53 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A48D79151D30374B00582F53 /* CardsArea */,
+				A48D791A1D30374B00582F53 /* DetailsArea */,
+				A48D791D1D30374B00582F53 /* StatusesArea */,
+				A48D79201D30374B00582F53 /* UILayer.cpp */,
+				A48D79211D30374B00582F53 /* UILayer.hpp */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A48D79151D30374B00582F53 /* CardsArea */ = {
+			isa = PBXGroup;
+			children = (
+				A48D79161D30374B00582F53 /* CardsArea.cpp */,
+				A48D79171D30374B00582F53 /* CardsArea.hpp */,
+				A48D79181D30374B00582F53 /* CardUI.cpp */,
+				A48D79191D30374B00582F53 /* CardUI.hpp */,
+			);
+			path = CardsArea;
+			sourceTree = "<group>";
+		};
+		A48D791A1D30374B00582F53 /* DetailsArea */ = {
+			isa = PBXGroup;
+			children = (
+				A48D791B1D30374B00582F53 /* DetailsArea.cpp */,
+				A48D791C1D30374B00582F53 /* DetailsArea.hpp */,
+			);
+			path = DetailsArea;
+			sourceTree = "<group>";
+		};
+		A48D791D1D30374B00582F53 /* StatusesArea */ = {
+			isa = PBXGroup;
+			children = (
+				A48D791E1D30374B00582F53 /* StatusesArea.cpp */,
+				A48D791F1D30374B00582F53 /* StatusesArea.hpp */,
+			);
+			path = StatusesArea;
+			sourceTree = "<group>";
+		};
+		A48D79271D303B4900582F53 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A48D79281D303B4900582F53 /* Character */,
+				A48D79291D303B4900582F53 /* UI */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		A48D79281D303B4900582F53 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		A48D79291D303B4900582F53 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A48D792A1D303B4900582F53 /* cardsArea.png */,
+				A48D792B1D303B4900582F53 /* cemetery.png */,
+				A48D792C1D303B4900582F53 /* deck.png */,
+				A48D792D1D303B4900582F53 /* details.png */,
+				A48D792E1D303B4900582F53 /* field600x600.png */,
+				A48D792F1D303B4900582F53 /* hand.png */,
+				A48D79301D303B4900582F53 /* statusesArea.png */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A48D79311D303B4900582F53 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		A494A71F1D05849A009DB531 /* Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +576,7 @@
 		A4E464691D03390D00842D31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A48D79141D30374B00582F53 /* UI */,
 				A494A71F1D05849A009DB531 /* Card */,
 				A4E4646A1D03390D00842D31 /* Character */,
 				A4E4646B1D03390D00842D31 /* Map */,
@@ -664,7 +788,9 @@
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				A48D79341D303B4900582F53 /* deck.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				A48D79321D303B4900582F53 /* cardsArea.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
@@ -672,6 +798,7 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				A48D79331D303B4900582F53 /* cemetery.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				A4F9F5631D0BA376005CDC11 /* test.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
@@ -683,9 +810,13 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				A48D79351D303B4900582F53 /* details.png in Resources */,
+				A48D79381D303B4900582F53 /* statusesArea.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				A48D79371D303B4900582F53 /* hand.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				A48D79361D303B4900582F53 /* field600x600.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,12 +825,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
+				A48D793F1D303E3000582F53 /* cemetery.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				A4F9F5641D0BA37D005CDC11 /* test.png in Resources */,
+				A48D79441D303E4100582F53 /* statusesArea.png in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
+				A48D79401D303E3300582F53 /* deck.png in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				A48D793E1D303E2C00582F53 /* cardsArea.png in Resources */,
+				A48D79411D303E3600582F53 /* details.png in Resources */,
+				A48D79431D303E3D00582F53 /* hand.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				A48D79421D303E3900582F53 /* field600x600.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,8 +850,10 @@
 			files = (
 				A4F9F55A1D07E85D005CDC11 /* Move.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				A48D79231D30374B00582F53 /* CardUI.cpp in Sources */,
 				A4FAD5C51D1E28E1008723B1 /* Field.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				A48D79221D30374B00582F53 /* CardsArea.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				A494A7231D058577009DB531 /* Animation.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -721,8 +861,11 @@
 				A4F9F55E1D07EA17005CDC11 /* Status.cpp in Sources */,
 				A4E464701D03392900842D31 /* GameMain.cpp in Sources */,
 				A4FD44131D0C0A66006D2109 /* BaseCharacter.cpp in Sources */,
+				A48D79251D30374B00582F53 /* StatusesArea.cpp in Sources */,
 				A4FD441B1D0C0B6E006D2109 /* BaseCard.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				A48D79241D30374B00582F53 /* DetailsArea.cpp in Sources */,
+				A48D79261D30374B00582F53 /* UILayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,14 +873,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48D793A1D303D6600582F53 /* CardUI.cpp in Sources */,
 				A4F9F55B1D07E85D005CDC11 /* Move.cpp in Sources */,
 				A4FD441C1D0C0B6E006D2109 /* BaseCard.cpp in Sources */,
+				A48D793B1D303D6900582F53 /* DetailsArea.cpp in Sources */,
 				A4E464711D03392900842D31 /* GameMain.cpp in Sources */,
 				A4FD44141D0C0A66006D2109 /* BaseCharacter.cpp in Sources */,
+				A48D793D1D303DA900582F53 /* StatusesArea.cpp in Sources */,
+				A48D79391D303D6300582F53 /* CardsArea.cpp in Sources */,
 				A4FAD5C61D1E28E1008723B1 /* Field.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				A4F9F55F1D07EA17005CDC11 /* Status.cpp in Sources */,
+				A48D793C1D303D6C00582F53 /* UILayer.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				A4FAD5C21D1E27C1008723B1 /* Panel.cpp in Sources */,
 				A494A7241D058577009DB531 /* Animation.cpp in Sources */,
