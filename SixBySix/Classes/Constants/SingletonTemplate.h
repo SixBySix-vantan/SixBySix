@@ -1,6 +1,6 @@
 //
 //  SingletonTemplate.h
-//  AutumnFoliage
+//  
 //
 //  Created by 辰巳優太 on 2016/06/30.
 //
