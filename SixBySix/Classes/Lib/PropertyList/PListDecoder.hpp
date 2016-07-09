@@ -1,15 +1,15 @@
 //
-//  PListDecoder.h
+//  PListDecoder.hpp
 //  
 //
 //  Created by 辰巳優太 on 2016/07/05.
 //
 //
 
-#ifndef PListDecoder_h
-#define PListDecoder_h
+#ifndef PListDecoder_hpp
+#define PListDecoder_hpp
 
-#include "SingletonTemplate.h"
+#include "SingletonTemplate.hpp"
 
 using namespace cocos2d ;
 using namespace std ;
@@ -62,4 +62,4 @@ private:
 
 
 
-#endif /* PListDecoder_h */
+#endif /* PListDecoder_hpp */
