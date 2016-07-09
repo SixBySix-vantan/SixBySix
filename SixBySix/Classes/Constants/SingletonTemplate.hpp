@@ -1,16 +1,13 @@
 //
-//  SingletonTemplate.h
+//  SingletonTemplate.hpp
 //  
 //
 //  Created by 辰巳優太 on 2016/06/30.
 //
 //
 
-#ifndef SingletonTemplate_h
-#define SingletonTemplate_h
-
-//#include "typeinfo.h"
-//#include <cxxabi.h>
+#ifndef SingletonTemplate_hpp
+#define SingletonTemplate_hpp
 
 // =======================================================================================================
 // シングルトンクラスのテンプレートクラス
@@ -98,4 +95,4 @@ public:
 
 
 
-#endif /* SingletonTemplate_h */
+#endif /* SingletonTemplate_hpp */
