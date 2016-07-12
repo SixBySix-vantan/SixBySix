@@ -86,6 +86,8 @@
 		A48D79441D303E4100582F53 /* statusesArea.png in Resources */ = {isa = PBXBuildFile; fileRef = A48D79301D303B4900582F53 /* statusesArea.png */; };
 		A494A7231D058577009DB531 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A494A7211D058577009DB531 /* Animation.cpp */; };
 		A494A7241D058577009DB531 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A494A7211D058577009DB531 /* Animation.cpp */; };
+		A4B5881D1D30A79B00143A01 /* Phaes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B5881B1D30A79B00143A01 /* Phaes.cpp */; };
+		A4B5881E1D30A79B00143A01 /* Phaes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B5881B1D30A79B00143A01 /* Phaes.cpp */; };
 		A4E464701D03392900842D31 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E4646E1D03392900842D31 /* GameMain.cpp */; };
 		A4E464711D03392900842D31 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E4646E1D03392900842D31 /* GameMain.cpp */; };
 		A4F9F55A1D07E85D005CDC11 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4F9F5581D07E85D005CDC11 /* Move.cpp */; };
@@ -216,6 +218,8 @@
 		A48D79301D303B4900582F53 /* statusesArea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusesArea.png; sourceTree = "<group>"; };
 		A494A7211D058577009DB531 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		A494A7221D058577009DB531 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
+		A4B5881B1D30A79B00143A01 /* Phaes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Phaes.cpp; sourceTree = "<group>"; };
+		A4B5881C1D30A79B00143A01 /* phase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = phase.hpp; sourceTree = "<group>"; };
 		A4E4646E1D03392900842D31 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
 		A4E4646F1D03392900842D31 /* GameMain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMain.hpp; sourceTree = "<group>"; };
 		A4E464761D0340A500842D31 /* Constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
@@ -529,9 +533,19 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		A4B5881A1D30A76400143A01 /* Faze */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5881B1D30A79B00143A01 /* Phaes.cpp */,
+				A4B5881C1D30A79B00143A01 /* phase.hpp */,
+			);
+			path = Faze;
+			sourceTree = "<group>";
+		};
 		A4E464641D03390D00842D31 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A4B5881A1D30A76400143A01 /* Faze */,
 				A4E464651D03390D00842D31 /* Animation */,
 				A4E464661D03390D00842D31 /* Move */,
 				A4E464671D03390D00842D31 /* Status */,
@@ -859,6 +873,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				A4FAD5C11D1E27C1008723B1 /* Panel.cpp in Sources */,
 				A4F9F55E1D07EA17005CDC11 /* Status.cpp in Sources */,
+				A4B5881D1D30A79B00143A01 /* Phaes.cpp in Sources */,
 				A4E464701D03392900842D31 /* GameMain.cpp in Sources */,
 				A4FD44131D0C0A66006D2109 /* BaseCharacter.cpp in Sources */,
 				A48D79251D30374B00582F53 /* StatusesArea.cpp in Sources */,
@@ -888,6 +903,7 @@
 				A48D793C1D303D6C00582F53 /* UILayer.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				A4FAD5C21D1E27C1008723B1 /* Panel.cpp in Sources */,
+				A4B5881E1D30A79B00143A01 /* Phaes.cpp in Sources */,
 				A494A7241D058577009DB531 /* Animation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
