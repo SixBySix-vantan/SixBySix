@@ -27,7 +27,10 @@ protected:
     ~CBaseCharacter();
     
     //初期化
-    bool init() override;
+    virtual bool init() override;
+    
+    // 反映処理
+    //virtual void applyFunc();
     
 public:
     
@@ -44,18 +47,23 @@ private:
     //更新処理
     virtual void update( float deltaTime ) override;
     
+  
+    
 public:
     //================================================================================================
     //メンバ変数 + メンバ関数追加
     //================================================================================================
     //アニメーションデータ
-    CAnimation *m_pAnimation = NULL;
+    std::vector<CAnimation*>* m_pAnimations = NULL;
     
     //ステータス
     CStatus *m_pStatus = NULL;
     
     //位置情報
     CMove *m_pMove = NULL;
+    
+    // 有効フラグ
+    bool m_activeFlag = false;
     
     //押された時のイベント
     virtual bool touchBeganEvent() = 0;
