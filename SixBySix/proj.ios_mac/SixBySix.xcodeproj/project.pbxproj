@@ -88,6 +88,10 @@
 		A494A7241D058577009DB531 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A494A7211D058577009DB531 /* Animation.cpp */; };
 		A4B5881D1D30A79B00143A01 /* Phaes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B5881B1D30A79B00143A01 /* Phaes.cpp */; };
 		A4B5881E1D30A79B00143A01 /* Phaes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B5881B1D30A79B00143A01 /* Phaes.cpp */; };
+		A4E3CC401D39FA0D00A8D2EA /* ObjectCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3CC3E1D39FA0D00A8D2EA /* ObjectCharacter.cpp */; };
+		A4E3CC421D39FA2400A8D2EA /* ObjectCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3CC3E1D39FA0D00A8D2EA /* ObjectCharacter.cpp */; };
+		A4E3CC451D39FA8F00A8D2EA /* PlayerCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3CC431D39FA8F00A8D2EA /* PlayerCharacter.cpp */; };
+		A4E3CC461D39FA8F00A8D2EA /* PlayerCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E3CC431D39FA8F00A8D2EA /* PlayerCharacter.cpp */; };
 		A4E464701D03392900842D31 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E4646E1D03392900842D31 /* GameMain.cpp */; };
 		A4E464711D03392900842D31 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E4646E1D03392900842D31 /* GameMain.cpp */; };
 		A4F9F55A1D07E85D005CDC11 /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4F9F5581D07E85D005CDC11 /* Move.cpp */; };
@@ -220,6 +224,10 @@
 		A494A7221D058577009DB531 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
 		A4B5881B1D30A79B00143A01 /* Phaes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Phaes.cpp; sourceTree = "<group>"; };
 		A4B5881C1D30A79B00143A01 /* phase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = phase.hpp; sourceTree = "<group>"; };
+		A4E3CC3E1D39FA0D00A8D2EA /* ObjectCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectCharacter.cpp; sourceTree = "<group>"; };
+		A4E3CC3F1D39FA0D00A8D2EA /* ObjectCharacter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ObjectCharacter.hpp; sourceTree = "<group>"; };
+		A4E3CC431D39FA8F00A8D2EA /* PlayerCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerCharacter.cpp; sourceTree = "<group>"; };
+		A4E3CC441D39FA8F00A8D2EA /* PlayerCharacter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlayerCharacter.hpp; sourceTree = "<group>"; };
 		A4E4646E1D03392900842D31 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
 		A4E4646F1D03392900842D31 /* GameMain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMain.hpp; sourceTree = "<group>"; };
 		A4E464761D0340A500842D31 /* Constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
@@ -664,6 +672,8 @@
 		A4FD440F1D0C0A4E006D2109 /* ObjectCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				A4E3CC3E1D39FA0D00A8D2EA /* ObjectCharacter.cpp */,
+				A4E3CC3F1D39FA0D00A8D2EA /* ObjectCharacter.hpp */,
 			);
 			path = ObjectCharacter;
 			sourceTree = "<group>";
@@ -671,6 +681,8 @@
 		A4FD44101D0C0A4E006D2109 /* PlayerCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				A4E3CC431D39FA8F00A8D2EA /* PlayerCharacter.cpp */,
+				A4E3CC441D39FA8F00A8D2EA /* PlayerCharacter.hpp */,
 			);
 			path = PlayerCharacter;
 			sourceTree = "<group>";
@@ -862,6 +874,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E3CC401D39FA0D00A8D2EA /* ObjectCharacter.cpp in Sources */,
 				A4F9F55A1D07E85D005CDC11 /* Move.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				A48D79231D30374B00582F53 /* CardUI.cpp in Sources */,
@@ -874,6 +887,7 @@
 				A4FAD5C11D1E27C1008723B1 /* Panel.cpp in Sources */,
 				A4F9F55E1D07EA17005CDC11 /* Status.cpp in Sources */,
 				A4B5881D1D30A79B00143A01 /* Phaes.cpp in Sources */,
+				A4E3CC451D39FA8F00A8D2EA /* PlayerCharacter.cpp in Sources */,
 				A4E464701D03392900842D31 /* GameMain.cpp in Sources */,
 				A4FD44131D0C0A66006D2109 /* BaseCharacter.cpp in Sources */,
 				A48D79251D30374B00582F53 /* StatusesArea.cpp in Sources */,
@@ -890,6 +904,8 @@
 			files = (
 				A48D793A1D303D6600582F53 /* CardUI.cpp in Sources */,
 				A4F9F55B1D07E85D005CDC11 /* Move.cpp in Sources */,
+				A4E3CC421D39FA2400A8D2EA /* ObjectCharacter.cpp in Sources */,
+				A4E3CC461D39FA8F00A8D2EA /* PlayerCharacter.cpp in Sources */,
 				A4FD441C1D0C0B6E006D2109 /* BaseCard.cpp in Sources */,
 				A48D793B1D303D6900582F53 /* DetailsArea.cpp in Sources */,
 				A4E464711D03392900842D31 /* GameMain.cpp in Sources */,
