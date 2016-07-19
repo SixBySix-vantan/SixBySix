@@ -1,34 +1,36 @@
 //
-//  DetailsArea.hpp
+//  UI_DetailsWindow.hpp
 //  6x6
 //
 //  Created by 辰巳優太 on 2016/06/08.
 //
 //
 
-#ifndef DetailsArea_hpp
-#define DetailsArea_hpp
+#ifndef UI_DetailsWindow_hpp
+#define UI_DetailsWindow_hpp
 
-#include "cocos2d.h"
-using namespace cocos2d ;
-using namespace std ;
-
+#include "UI_Window.hpp"
 
 // ===================================================================================================================
-// 詳細エリア
+// 詳細ウィンドウ
 // 選択中のオブジェクトの詳細を表示するクラス
 // このクラスを CUILayer クラスに取り付ける
 // ===================================================================================================================
-class CDetailsArea : public Layer {
+class CUI_DetailsWindow : public CUI_Window {
 private:
-    // カード画像？
+    // カード画像
     Sprite* m_pCard = NULL ;
     
 public:
+	// コンストラクタ
+	CUI_DetailsWindow() ;
+	// デストラクタ
+	~CUI_DetailsWindow() ;
+	
     // 初期化
     bool init() override ;
     
-    CREATE_FUNC( CDetailsArea ) ;
+    CREATE_FUNC( CUI_DetailsWindow ) ;
 };
 
-#endif /* DetailsArea_hpp */
+#endif /* UI_DetailsWindow_hpp */
