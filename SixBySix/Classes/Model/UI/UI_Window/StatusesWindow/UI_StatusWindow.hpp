@@ -1,31 +1,26 @@
 //
-//  StatusesArea.hpp
+//  UI_StatusWindow.hpp
 //  6x6
 //
 //  Created by 辰巳優太 on 2016/06/08.
 //
 //
 
-#ifndef StatusesArea_hpp
-#define StatusesArea_hpp
+#ifndef UI_StatusWindow_hpp
+#define UI_StatusWindow_hpp
 
-#include "cocos2d.h"
-using namespace cocos2d ;
-using namespace std ;
+#include "UI_Window.hpp"
 
 
 // ===================================================================================================================
-// ステータスエリア
+// ステータスウィンドウ
 // 両プレイヤーのステータスを表示するクラス
 // このクラスを CUILayer クラスに取り付ける
 // ===================================================================================================================
-class CStatusesArea : public Layer {
+class CUI_StatusWindow : public CUI_Window {
 private:
     // プレイヤーの情報の参照？
     // CPlayer* m_pReference = NULL ;
-    
-    // エリア背景
-    Sprite* m_pBack = NULL ;
     
     // プレイヤー名ラベル
     Label* m_pPlayerNameLabel = NULL ;
@@ -38,11 +33,16 @@ private:
     
     
 public:
+	// コンストラクタ
+	CUI_StatusWindow() ;
+	// デストラクタ
+	~CUI_StatusWindow() ;
+	
     // 初期化
     bool init() override ;
     
-    CREATE_FUNC( CStatusesArea ) ;
+    CREATE_FUNC( CUI_StatusWindow ) ;
     
 };
 
-#endif /* StatusesArea_hpp */
+#endif /* UI_StatusWindow_hpp */
