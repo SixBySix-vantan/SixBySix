@@ -48,6 +48,8 @@
 
 #define IMAGE_UI_DetailsArea    "details.png"
 
+#define IMAGE_UI_Icon_Fire		"Test_Icon_Fire.png"
+#define IMAGE_UI_Icon_Ice		"Test_Icon_Ice.png"
 
 //================================================================================================
 //音楽登録
