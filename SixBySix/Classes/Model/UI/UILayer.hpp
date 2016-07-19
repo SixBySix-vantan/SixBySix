@@ -10,30 +10,34 @@
 #define UILayer_hpp
 
 
-// 前方宣言
-enum class UI_WindowType ;
-class CUI_Window ;
+#include "CardsArea.hpp"
+#include "DetailsArea.hpp"
+#include "StatusesArea.hpp"
 
 
 // ===================================================================================================================
 // UIレイヤー
 // 各種UIを取り付けてまとめるクラス
-//
-// マウスの入力情報はこのクラスから各UIへ伝える
-// このクラスをCGameMainクラスなどに取り付ける
+// このクラスを Scene や CGameMainクラスなどに取り付ける
 // ===================================================================================================================
 class CUILayer : public Layer {
 private:
-    // 取り付ける表示エリア群
-	std::map<UI_WindowType, CUI_Window*> m_UIWindows ;
-	
-	
+    // カードエリア
+    CCardsArea* m_pCardsArea = NULL ;
+    
+    // カード詳細エリア
+    CDetailsArea* m_pDetailsArea = NULL ;
+    
+    // ステータスエリア
+    CStatusesArea* m_pStatusesAreas[2] = { NULL } ;
+    
 public:
     // 初期化
     bool init() override ;
     
     CREATE_FUNC( CUILayer ) ;
-	
+    
+    
 };
 
 

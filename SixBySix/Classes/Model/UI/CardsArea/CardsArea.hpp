@@ -1,48 +1,53 @@
 //
-//  UI_CardsWindow.hpp
+//  CardsArea.hpp
 //  6x6
 //
 //  Created by 辰巳優太 on 2016/06/08.
 //
 //
 
-#ifndef UI_CardsWindow_hpp
-#define UI_CardsWindow_hpp
+#ifndef CardsArea_hpp
+#define CardsArea_hpp
 
-#include "UI_Window.hpp"
+#include "cocos2d.h"
+using namespace cocos2d ;
+using namespace std ;
 
-// 前方宣言
-class CUI_Card ;
+#include "CardUI.hpp"
 
 
 // ===================================================================================================================
-// カードウィンドウ
+// カードエリア
 // デッキ・手札・墓地のカードを取り付けて表示するクラス
 // このクラスを CUILayer クラスに取り付ける
 // ===================================================================================================================
-class CUI_CardsWindow : public CUI_Window {
+class CCardsArea : public Layer {
 private:
+    // エリア背景
+    Sprite* m_pBackGround = NULL ;
+    
+    
     // デッキ画像
-    CUI_Card* m_pDeck = NULL ;
-	
-    // 手札画像群
-	std::vector<CUI_Card*> m_hands ;
+    CDeckUI* m_pDeck = NULL ;
+    
+    
+    // 手札画像
+    vector<CHandUI*>* m_pHands = NULL ;
+    
     
     // 墓地画像
-    CUI_Card* m_pCemetery = NULL ;
+    CCemeteryUI* m_pCemetery = NULL ;
     
     
 public:
-	// コンストラクタ
-	CUI_CardsWindow() ;
     // デストラクタ
-    ~CUI_CardsWindow() ;
+    ~CCardsArea() ;
     // 初期化
     bool init() override ;
     
-    CREATE_FUNC( CUI_CardsWindow ) ;
+    CREATE_FUNC( CCardsArea ) ;
     
 };
 
 
-#endif /* UI_CardsWindow_hpp */
+#endif /* CardsArea_hpp */

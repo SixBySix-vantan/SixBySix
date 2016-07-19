@@ -11,47 +11,46 @@
 
 // ===================================================================================================================
 // UIレイヤー
-// 各種UIを取り付けてまとめるクラス
-//
-// マウスの入力情報はこのクラスから各UIへ伝える
-// このクラスをCGameMainクラスなどに取り付ける
 // ===================================================================================================================
 // 初期化
 bool CUILayer::init() {
     // スーパークラスの初期化
     if ( Layer::init() == false )
         return false ;
-	
-	
-	// カードウィンドウの生成と追加
-	auto pCards = CUI_CardsWindow::create() ;
-	pCards->setPosition( Position_CardsArea ) ;
-	pCards->setZOrder( 1 ) ;
-	this->m_UIWindows[UI_WindowType::Cards] = pCards ;
-	
-    // 詳細ウィンドウの生成と追加
-    auto pDetails = CUI_DetailsWindow::create() ;
-    pDetails->setPosition( Position_DetailsArea ) ;
-	this->m_UIWindows[UI_WindowType::Details] = pDetails ;
     
-    // ステータスウィンドウの生成と追加
-    auto pMyStatus = CUI_StatusWindow::create() ;
-    pMyStatus->setPosition( Position_P1_StatusesArea ) ;
-	this->m_UIWindows[UI_WindowType::MyStatus] = pMyStatus ;
-	
-    auto pOpponentStatus = CUI_StatusWindow::create() ;
-    pOpponentStatus->setPosition( Position_P2_StatusesArea ) ;
-	this->m_UIWindows[UI_WindowType::OpponentStatus] = pOpponentStatus ;
-	
-	
-	// ウィンドウ群の取り付け
-	for ( int i = 0 ; i < this->m_UIWindows.size() ; i++ ) {
-		this->addChild( this->m_UIWindows[(UI_WindowType)i] ) ;
-	}
-	
+    // カードエリアの生成と取り付け
+    this->m_pCardsArea = CCardsArea::create() ;
+    this->m_pCardsArea->setPosition( Position_CardsArea ) ;
+    this->addChild( this->m_pCardsArea ) ;
+    
+    // カード詳細エリアの生成と取り付け
+    this->m_pDetailsArea = CDetailsArea::create() ;
+    this->m_pDetailsArea->setPosition( Position_DetailsArea ) ;
+    this->addChild( this->m_pDetailsArea ) ;
+    
+    // ステータスエリアの生成と取り付け
+    this->m_pStatusesAreas[0] = CStatusesArea::create() ;
+    this->m_pStatusesAreas[0]->setPosition( Position_P1_StatusesArea ) ;
+    this->addChild( this->m_pStatusesAreas[0] ) ;
+    this->m_pStatusesAreas[1] = CStatusesArea::create() ;
+    this->m_pStatusesAreas[1]->setPosition( Position_P2_StatusesArea ) ;
+    this->addChild( this->m_pStatusesAreas[1] ) ;
+    
     return true ;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
