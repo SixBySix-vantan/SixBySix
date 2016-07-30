@@ -21,6 +21,7 @@ bool CUI_Hand::init() {
 	
 	// テクスチャ
 	this->setTexture( IMAGE_UI_Hand ) ;
+	this->setBody() ;
 	// アイコンの生成
 	this->createIcon() ;
 	

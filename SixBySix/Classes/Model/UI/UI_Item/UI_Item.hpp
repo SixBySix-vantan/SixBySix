@@ -10,6 +10,10 @@
 #define UI_Item_hpp
 
 
+// 前方宣言
+class CUI_Body ;
+
+
 // ===================================================================================================================
 // UIアイテム
 // UI一つそのもの
@@ -32,6 +36,9 @@ public:
 	 */
 	void onExit() override ;
 	
+	// デストラクタ
+	~CUI_Sprite() ;
+	
 	/**
 	 @desc		絶対座標の設定
 	 */
@@ -43,13 +50,10 @@ public:
 	 */
 	cocos2d::Point getAbsPosition() ;
 	
-	
-protected:
 	/**
-	 @desc		OverLap判定を行う矩形の原点の設定
-	 @tips		絶対座標を設定後に呼び出される
+	 @desc		実体データの設定
 	 */
-	void setRectOriginPosition() ;
+	void setBody() ;
 	
 	
 	// =========================================================
@@ -78,6 +82,10 @@ protected:
 	// 画面左下からの絶対座標
 	cocos2d::Vec2 m_absPosition ;
 	
+	// 実体データ
+	CUI_Body* m_pBody = NULL ;
+	
+	
 	// マウスカーソルが重なっているかどうかのフラグ
 	bool m_isOverLap = false ;
 	
@@ -100,9 +108,6 @@ protected:
 	// =========================================================
 	// OverLap判定関連
 	// =========================================================
-	// OverLap判定を行う矩形の原点
-	Point m_rectOriginPos ;
-	
 	/**
 	 @desc		マウスカーソルが重なっているかどうか調べる
 	 @param		マウスカーソル座標
@@ -111,6 +116,7 @@ protected:
 	bool isCursorOverLap( const cocos2d::Point& cursorPos ) ;
 	
 };
+
 
 
 

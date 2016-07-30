@@ -22,7 +22,7 @@ bool CUI_Deck::init() {
 	
 	// テクスチャ
 	this->setTexture( IMAGE_UI_Deck ) ;
-	
+	this->setBody() ;
 	
 	return true ;
 	

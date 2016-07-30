@@ -52,6 +52,12 @@ void CUI_Sprite::onExit() {
 }
 
 
+// デストラクタ
+CUI_Sprite::~CUI_Sprite() {
+	SAFE_DELETE( this->m_pBody ) ;
+}
+
+
 /**
  @desc		絶対座標の設定
  */
@@ -78,9 +84,6 @@ void CUI_Sprite::setAbsPosition() {
 	// 計算結果を自身の絶対位置に設定
 	this->m_absPosition = pos ;
 	
-	// OverLap判定を行う矩形の原点の設定
-	this->setRectOriginPosition() ;
-	
 }
 
 
@@ -94,15 +97,20 @@ cocos2d::Point CUI_Sprite::getAbsPosition() {
 
 
 /**
- @desc		OverLap判定を行う矩形の原点の設定
- @tips		絶対座標を設定後に呼び出される
+ @desc		実体データの設定
  */
-void CUI_Sprite::setRectOriginPosition() {
+void CUI_Sprite::setBody() {
 	
-	float posX = this->m_absPosition.x - this->getContentSize().width * this->getScaleX() * 0.5 ;
-	float posY = this->m_absPosition.y + this->getContentSize().height * this->getScaleY() * 0.5 ;
+	// テクスチャが設定されていない場合は処理しない
+	if ( this->getTexture() == NULL ) {
+		CCLOG( "[ UI_Ittem ]\nテクスチャが設定されていないので、実体データの設定に失敗" ) ;
+		return ;
+	}
+		
+	// 自身のサイズを取得
+	auto size = this->getContentSize() ;
 	
-	this->m_rectOriginPos = Point( posX, posY ) ;
+	this->m_pBody = new CUI_Body( size.height * 0.5f, -size.height * 0.5f, -size.width * 0.5f, size.width * 0.5f ) ;
 	
 }
 
@@ -209,16 +217,13 @@ bool CUI_Sprite::isCursorOverLap( const cocos2d::Point& cursorPos ) {
 	// なので 得られた Y座標に画面縦幅を加算して画面左下を原点扱いにする
 	Point testPos = Point( cursorPos.x, cursorPos.y + WINDOW_TOP ) ;
 	
-	// 矩形の原点
-	Point myOrigin = this->m_rectOriginPos ;
-	// 矩形の幅
-	Size mySize = Size( this->getContentSize().width * this->getScaleX(), -this->getContentSize().height * this->getScaleY() ) ;
-	// 判定を行う矩形を取得
-	Rect myRect = Rect( myOrigin, Size( mySize.width + myOrigin.x, mySize.height + myOrigin.y ) ) ;
+	const float scaleX = this->getScaleX() ;
 	
-	// 判定
-	if ( testPos.x > myRect.origin.x && testPos.x < myRect.size.width ) {
-		if ( testPos.y > myRect.size.height && testPos.y < myRect.origin.y )
+	if ( testPos.x > this->m_pBody->getLeft() * scaleX + getAbsPosition().x && testPos.x < this->m_pBody->getRight() * scaleX + getAbsPosition().x ) {
+		
+		const float scaleY = this->getScaleY() ;
+		
+		if ( testPos.y > this->m_pBody->getBottom() * scaleY + getAbsPosition().y && testPos.y < this->m_pBody->getTop() * scaleY + getAbsPosition().y )
 			return true ;
 	}
 	

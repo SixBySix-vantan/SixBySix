@@ -21,7 +21,7 @@ bool CUI_Cemetery::init() {
 	
 	// テクスチャ
 	this->setTexture( IMAGE_UI_Cemetery ) ;
-	
+	this->setBody() ;
 	
 	
 	return true ;
