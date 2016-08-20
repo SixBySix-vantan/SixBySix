@@ -6,16 +6,17 @@
 //
 //
 
-#ifndef ObjectCharacter_hpp
-#define ObjectCharacter_hpp
-
-#include <stdio.h>
+#pragma once
 
 //===========================================
 // 追加のインクルードここから
 //===========================================
 #include "BaseCharacter.hpp"
 
+
+//================================================================================================
+//オブジェクトクラス
+//================================================================================================
 class CObjectCharacter : public CBaseCharacter{
 private:
     
@@ -26,47 +27,23 @@ private:
     ~CObjectCharacter();
     
     // 初期化処理
-    virtual bool init() override;
+    bool init() override;
     
     // 更新処理
-    virtual void update(float deltaTime) override;
-};
-
-
-#endif /* ObjectCharacter_hpp */
-/*
-private:
-//入場処理
-virtual void onEnter() override;
-
-//退場
-virtual void onExit() override;
-
-//更新処理
-virtual void update( float deltaTime ) override;
-
+    void update(float deltaTime) override;
+    
 public:
-//================================================================================================
-//メンバ変数 + メンバ関数追加
-//================================================================================================
-//アニメーションデータ
-CAnimation *m_pAnimation = NULL;
+    
+    //押された時のイベント
+    void touchBeganEvent( cocos2d::Point pos ) override;
+    
+    //離された時のイベント
+    void touchReleaseEvent( cocos2d::Point pos ) override;
+    
+    //動かされた時のイベント
+    void touchMoveEvent( cocos2d::Point pos ) override;
+    
+    //キャンセル時のイベント
+    void touchCancelEvent( cocos2d::Point pos ) override;
 
-//ステータス
-CStatus *m_pStatus = NULL;
-
-//位置情報
-CMove *m_pMove = NULL;
-
-//押された時のイベント
-virtual bool touchBeganEvent() = 0;
-
-//離された時のイベント
-virtual void touchReleaseEvent() = 0;
-
-//動かされた時のイベント
-virtual void touchMoveEvent() = 0;
-
-//キャンセル時のイベント
-virtual void touchCancelEvent() = 0;
-*/
+};

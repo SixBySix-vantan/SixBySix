@@ -72,14 +72,14 @@ public:
     virtual void applyFunc();
     
     //押された時のイベント
-    virtual bool touchBeganEvent() = 0;
+    virtual void touchBeganEvent( cocos2d::Point pos ) = 0;
     
     //離された時のイベント
-    virtual void touchReleaseEvent() = 0;
+    virtual void touchReleaseEvent( cocos2d::Point pos ) = 0;
     
     //動かされた時のイベント
-    virtual void touchMoveEvent() = 0;
+    virtual void touchMoveEvent( cocos2d::Point pos ) = 0;
     
     //キャンセル時のイベント
-    virtual void touchCancelEvent() = 0;
+    virtual void touchCancelEvent( cocos2d::Point pos ) = 0;
 };

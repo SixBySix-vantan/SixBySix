@@ -42,7 +42,7 @@ bool CPlayerCharacter::init() {
     //移動データ生成
     this->m_pMove = new CMove();
     this->m_pMove->setPos( WINDOW_CENTER );
-    
+        
     //アニメーションデータの生成
     this->m_pAnimations = new std::vector<CAnimation*>;
     this->m_pAnimations->push_back( new CChipNotAnimation() );
@@ -69,25 +69,30 @@ CPlayerCharacter *CPlayerCharacter::create(){
     //失敗していれば削除しnullを返す
     SAFE_DELETE( pRet );
     return NULL;
-
+    
 }
 
 //押された時のイベント
-bool CPlayerCharacter::touchBeganEvent(){
+void CPlayerCharacter::touchBeganEvent( cocos2d::Point pos ){
     CCLOG("押された");
 }
 
 //離された時のイベント
-void CPlayerCharacter::touchReleaseEvent(){
+void CPlayerCharacter::touchReleaseEvent( cocos2d::Point pos ){
+    //離された時のマウス位置に一番近いパネルにキャラを配置させる。
+    //パネル完成待ちまでこのまま
+    this->m_pMove->setPos( pos ); //テスト用
     CCLOG("離された");
 }
 
 //動かされた時のイベント
-void CPlayerCharacter::touchMoveEvent(){
+void CPlayerCharacter::touchMoveEvent( cocos2d::Point pos ){
+    //キャラの位置をマウスに追従させる
+    this->m_pMove->setPos( pos );
     CCLOG("うごくよねー");
 }
 
 //キャンセル時のイベント
-void CPlayerCharacter::touchCancelEvent() {
+void CPlayerCharacter::touchCancelEvent( cocos2d::Point pos ) {
     CCLOG("ひぇっ...");
 }

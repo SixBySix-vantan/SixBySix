@@ -50,6 +50,7 @@
 // =========================================================
 // Character
 // =========================================================
+#include "CharacterAggregate.hpp"
 #include "BaseCharacter.hpp"
 #include "PlayerCharacter.hpp"
 #include "ObjectCharacter.hpp"

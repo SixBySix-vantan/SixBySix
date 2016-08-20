@@ -32,15 +32,15 @@ public:
     static CPlayerCharacter *create();
     
     //押された時のイベント
-    bool touchBeganEvent() override;
+    void touchBeganEvent( cocos2d::Point pos ) override;
     
     //離された時のイベント
-    void touchReleaseEvent() override;
+    void touchReleaseEvent( cocos2d::Point pos ) override;
     
     //動かされた時のイベント
-    void touchMoveEvent() override;
+    void touchMoveEvent( cocos2d::Point pos ) override;
     
     //キャンセル時のイベント
-    void touchCancelEvent() override;
+    void touchCancelEvent( cocos2d::Point pos ) override;
 
 };
