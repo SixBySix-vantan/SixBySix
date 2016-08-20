@@ -66,4 +66,14 @@ void CBaseCharacter::onExit(){
 
 //更新処理
 void CBaseCharacter::update( float deltaTime ) {
+    this->applyFunc();
+}
+
+//反映処理
+void CBaseCharacter::applyFunc(){
+    //位置データ反映
+    this->setPosition( this->m_pMove->getPos() );
+    
+    //チップデータ反映
+    this->setTextureRect( (*this->m_pAnimations)[this->m_state]->getCurrentChip() );
 }

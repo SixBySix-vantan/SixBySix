@@ -46,10 +46,19 @@
 // Card
 // =========================================================
 #include "BaseCard.hpp"
+
+// =========================================================
+// Character
+// =========================================================
 #include "BaseCharacter.hpp"
+#include "PlayerCharacter.hpp"
+#include "ObjectCharacter.hpp"
+
+// =========================================================
+// Field / Panel
+// =========================================================
 #include "Panel.hpp"
 #include "Field.hpp"
-
 
 // =========================================================
 // UI
@@ -66,6 +75,7 @@
 #include "UI_Deck.hpp"
 #include "UI_Hand.hpp"
 #include "UI_Cemetery.hpp"
+#include "UI_Body.hpp"
 
 
 

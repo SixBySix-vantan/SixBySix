@@ -22,7 +22,7 @@ public:
     //デストラクタ
     ~CMove();
     
-public:
+private:
     //位置データ
     cocos2d::Point m_pos;
     
@@ -32,7 +32,15 @@ public:
     //加速度
     cocos2d::Vec2 m_accele;
     
+public:
     //移動計算
     void moveBy();
+    
+    //位置の取得
+    cocos2d::Point getPos();
+    
+    //位置の設定
+    void setPos( cocos2d::Point pos　);
+    
     
 };

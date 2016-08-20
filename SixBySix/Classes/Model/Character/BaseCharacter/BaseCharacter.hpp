@@ -47,7 +47,7 @@ private:
     //更新処理
     virtual void update( float deltaTime ) override;
     
-  
+    
     
 public:
     //================================================================================================
@@ -64,6 +64,12 @@ public:
     
     // 有効フラグ
     bool m_activeFlag = false;
+    
+    //状態
+    int m_state = 0;
+    
+    //反映処理
+    virtual void applyFunc();
     
     //押された時のイベント
     virtual bool touchBeganEvent() = 0;
