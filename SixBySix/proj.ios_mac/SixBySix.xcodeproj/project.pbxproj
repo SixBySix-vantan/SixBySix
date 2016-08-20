@@ -139,6 +139,8 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		F0EDE30D1D68B2BC005AF538 /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0EDE30B1D68B2BC005AF538 /* CharacterAggregate.cpp */; };
+		F0EDE30E1D68B2BC005AF538 /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0EDE30B1D68B2BC005AF538 /* CharacterAggregate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +296,8 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F0EDE30B1D68B2BC005AF538 /* CharacterAggregate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAggregate.cpp; sourceTree = "<group>"; };
+		F0EDE30C1D68B2BC005AF538 /* CharacterAggregate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,6 +585,8 @@
 		A45C371C1D6812B70075DB14 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				F0EDE30B1D68B2BC005AF538 /* CharacterAggregate.cpp */,
+				F0EDE30C1D68B2BC005AF538 /* CharacterAggregate.hpp */,
 				A45C371D1D6812B70075DB14 /* BaseCharacter */,
 				A45C37201D6812B70075DB14 /* ObjectCharacter */,
 				A45C37231D6812B70075DB14 /* PlayerCharacter */,
@@ -1048,6 +1054,7 @@
 				A45C37791D6812B70075DB14 /* UI_CardsWindow.cpp in Sources */,
 				A45C377B1D6812B70075DB14 /* UI_DetailsWindow.cpp in Sources */,
 				A45C37711D6812B70075DB14 /* UI_Deck.cpp in Sources */,
+				F0EDE30D1D68B2BC005AF538 /* CharacterAggregate.cpp in Sources */,
 				A45C37651D6812B70075DB14 /* ObjectCharacter.cpp in Sources */,
 				A45C37751D6812B70075DB14 /* UI_Card.cpp in Sources */,
 				A45C376F1D6812B70075DB14 /* UI_Cemetery.cpp in Sources */,
@@ -1098,6 +1105,7 @@
 				A45C37561D6812B70075DB14 /* Animation.cpp in Sources */,
 				A45C37681D6812B70075DB14 /* PlayerCharacter.cpp in Sources */,
 				A45C377C1D6812B70075DB14 /* UI_DetailsWindow.cpp in Sources */,
+				F0EDE30E1D68B2BC005AF538 /* CharacterAggregate.cpp in Sources */,
 				A45C375A1D6812B70075DB14 /* Phaes.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  GameMain.cpp
 //  SixBySix
 //
-//  Created by 安田一朗太 on 2016/06/05.
+//  Created by 岡本幸二 on 2016/06/05.
 //
 //
 
@@ -85,6 +85,15 @@ void CGameMainLayer::update( float deltaTime ){
     //毎フレーム更新する内容をここに書く
     //================================================================================================
     //フェイズの移動など・・・
+    //_/_/_/_/_/_
+    
+    
+    if(this->m_nam >= 180){
+    
+        CPhaesManager::getInstance()->nextPhaes(this->m_pUILayer);
+        this->m_nam = 0;
+    }
+    this->m_nam++;
     
 }
 
