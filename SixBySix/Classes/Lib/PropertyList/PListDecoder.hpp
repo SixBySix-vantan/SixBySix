@@ -16,12 +16,20 @@ using namespace std ;
 
 // ============================================================================================================================
 // PropertyListファイル解析クラス
-// Singleton
+//
 // ============================================================================================================================
 class CPListDecoder : public CStaticSingletonTemplate<CPListDecoder> {
+public:
+	friend class CStaticSingletonTemplate<CPListDecoder> ;
+protected:
+	CPListDecoder() ;
+	~CPListDecoder() ;
+	
+	
 private:
 	// 解析済みのPListファイル群
 	map<string, ValueMap> m_rootElements ;
+	
 	
 public:
 	/**

@@ -19,31 +19,19 @@ template <typename Ty>
 class CDynamicSingletonTemplate {
 protected:
 	// コンストラクタ
-	CDynamicSingletonTemplate() {
-		
-	}
+	CDynamicSingletonTemplate() {}
+	// デストラクタ
+	virtual ~CDynamicSingletonTemplate() {}
 	
 	// 共有インスタンス
 	static Ty* m_pSharedInstance ;
 	
-	/**
-	 @desc		初期化
-	 @tips		継承先で必要な初期化はこの関数をオーバーライドして記述する
-	 */
-	virtual void init() {}
-	
 	
 public:
-	// デストラクタ
-	virtual ~CDynamicSingletonTemplate() {
-		
-	}
-	
 	// 共有インスタンスの取得
 	static Ty* getInstance() {
 		if ( CDynamicSingletonTemplate<Ty>::m_pSharedInstance == NULL ) {
 			CDynamicSingletonTemplate<Ty>::m_pSharedInstance = new Ty() ;
-			CDynamicSingletonTemplate<Ty>::m_pSharedInstance->init() ;
 		}
 		return CDynamicSingletonTemplate<Ty>::m_pSharedInstance ;
 	}
@@ -53,7 +41,15 @@ public:
 		SAFE_DELETE( CDynamicSingletonTemplate<Ty>::m_pSharedInstance ) ;
 	}
 	
+	
+private:
+	// 代入不可
+	void operator = ( const CDynamicSingletonTemplate& object ) {}
+	// コピーコンストラクタ不可
+	CDynamicSingletonTemplate( const CDynamicSingletonTemplate &object ) {}
+	
 };
+
 
 // 共有インスタンスの静的変数
 template <typename Ty> Ty* CDynamicSingletonTemplate<Ty>::m_pSharedInstance = NULL ;
@@ -71,20 +67,23 @@ class CStaticSingletonTemplate {
 protected:
 	// コンストラクタ
 	CStaticSingletonTemplate() {}
+	// デストラクタ
+	virtual ~CStaticSingletonTemplate() {}
+	
 	
 public:
-	/**
-	 @desc		初期化
-	 @tips		継承先で必要な初期化はこの関数をオーバーライドして記述する
-	 */
-	virtual void init() {}
-	
 	// 共有インスタンスの取得
-	static Ty* getInstance() {
+	static Ty& getInstance() {
 		static Ty sharedInstance ;
-		sharedInstance.init() ;
-		return &sharedInstance ;
+		return sharedInstance ;
 	}
+	
+private:
+	// 代入不可
+	void operator = ( const CStaticSingletonTemplate& object ) {}
+	// コピーコンストラクタ不可
+	CStaticSingletonTemplate( const CStaticSingletonTemplate &object ) {}
+	
 };
 
 
