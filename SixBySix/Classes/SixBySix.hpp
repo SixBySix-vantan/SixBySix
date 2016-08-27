@@ -33,6 +33,7 @@
 #include "Animation.hpp"
 #include "Move.hpp"
 #include "Status.hpp"
+#include "phase.hpp"
 
 
 

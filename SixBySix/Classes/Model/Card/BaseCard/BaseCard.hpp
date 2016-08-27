@@ -22,7 +22,7 @@ private:
     CBaseCard();
     
     //デストラクタ
-    ~CBaseCard();
+    virtual ~CBaseCard();
     
     //初期化
     bool init() override;
@@ -47,9 +47,6 @@ public:
     //メンバ変数 + メンバ関数追加
     //================================================================================================
     
-    
-    
-    
     //押された時のイベント
     virtual bool touchBeganEvent() = 0;
     
@@ -61,4 +58,5 @@ public:
     
     //キャンセル時のイベント
     virtual void touchCancelEvent() = 0;
+    
 };
