@@ -6,4 +6,12 @@
 //
 //
 
-#include "CardStatus.h"
+#include "SixBySix.hpp"
+
+//取得
+int CCardStatus::getPlayerAtk(){
+    return playerAtk;
+}
+int CCardStatus::getObjectAtk(){
+    return objectAtk;
+}

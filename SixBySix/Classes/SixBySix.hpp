@@ -34,8 +34,7 @@
 #include "Move.hpp"
 #include "Status.hpp"
 #include "phase.hpp"
-
-
+#include "CardStatus.h"
 
 
 
@@ -47,6 +46,7 @@
 // Card
 // =========================================================
 #include "BaseCard.hpp"
+#include "CardEffect.h"
 
 // =========================================================
 // Character
