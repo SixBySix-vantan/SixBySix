@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CardsWindow</key>
+	<dict>
+		<key>posX</key>
+		<real>0.5</real>
+		<key>posY</key>
+		<real>0.083</real>
+		<key>ZOrder</key>
+		<integer>1</integer>
+	</dict>
+	<key>DetailsWindow</key>
+	<dict>
+		<key>posX</key>
+		<real>0.25</real>
+		<key>posY</key>
+		<real>0.58</real>
+		<key>ZOrder</key>
+		<integer>0</integer>
+	</dict>
+	<key>MyStatusWindow</key>
+	<dict>
+		<key>posX</key>
+		<real>0.047</real>
+		<key>posY</key>
+		<real>0.585</real>
+		<key>ZOrder</key>
+		<integer>0</integer>
+	</dict>
+	<key>OpponentStatusWindow</key>
+	<dict>
+		<key>posX</key>
+		<real>0.953</real>
+		<key>posY</key>
+		<real>0.585</real>
+		<key>ZOrder</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

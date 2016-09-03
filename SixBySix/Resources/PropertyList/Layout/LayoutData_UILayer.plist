@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CardsWindow</key>
+	<dict>
+		<key>ImageFileName</key>
+		<string>cardsArea.png</string>
+		<key>posX</key>
+		<real>0.5</real>
+		<key>posY</key>
+		<real>0.08</real>
+	</dict>
+	<key>DetailsWindow</key>
+	<dict>
+		<key>ImageFileName</key>
+		<string>details.png</string>
+		<key>posX</key>
+		<real>0.25</real>
+		<key>posY</key>
+		<real>0.58</real>
+	</dict>
+</dict>
+</plist>
