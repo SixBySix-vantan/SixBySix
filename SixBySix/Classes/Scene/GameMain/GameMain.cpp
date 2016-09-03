@@ -71,6 +71,24 @@ void CGameMainLayer::onEnter(){
     CUILayer *pUI = CUILayer::create();
     this->m_pUILayer->addChild( pUI );
     
+    
+    //発表用に追加/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
+    cocos2d::Sprite *pField = cocos2d::Sprite::create( IMAGE_FIELD );
+    pField->setPosition(Position_Field);
+    this->m_pMainLayer ->addChild( pField );
+    
+    aaa = CPlayerCharacter::create();
+    this->m_pMainLayer->addChild( aaa );
+    
+    //イベントリスナーを作成
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->onTouchBegan = CC_CALLBACK_2( CGameMainLayer::beganTest, this );
+    listener->onTouchEnded = CC_CALLBACK_2( CGameMainLayer::releaseTest, this );
+    listener->onTouchMoved = CC_CALLBACK_2( CGameMainLayer::moveTest, this );
+    
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority( listener, this );
+    //_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
+    
 }
 
 //退場処理
@@ -109,4 +127,40 @@ cocos2d::Scene *CGameMainLayer::createScene(){
     
     //シーンを返す
     return pScene;
+}
+
+bool CGameMainLayer::beganTest( cocos2d::Touch* touch, cocos2d::Event* event ){
+    //target : ターゲットのスプライト
+    CBaseCharacter *target = aaa;
+    
+    //targetBox : タッチされたスプライトの領域
+    Rect targetBox = target->getBoundingBox();
+    
+    //touchPoint : タッチされた場所...左上0,0になっている為、yは反転させる
+    Point touchPoint = Vec2(touch->getLocationInView().x, WINDOW_TOP - touch->getLocationInView().y);
+    
+    CCLOG( "X::%f", touchPoint.x );
+    CCLOG("Y::%f", touchPoint.y );
+    
+    //touchPointがtargetBoxの中に含まれているか判定
+    if (targetBox.containsPoint(touchPoint))
+    {
+        aaa->touchBeganEvent( touchPoint );
+        return true;
+    }
+    
+    return false;
+}
+
+void CGameMainLayer::releaseTest( cocos2d::Touch* touch, cocos2d::Event* event ){
+    //touchPoint : タッチされた場所...左上0,0になっている為、yは反転させる
+    Point touchPoint = Vec2(touch->getLocationInView().x, WINDOW_TOP - touch->getLocationInView().y);
+    
+    aaa->touchReleaseEvent( touchPoint );
+}
+
+void CGameMainLayer::moveTest( cocos2d::Touch* touch, cocos2d::Event* event ){
+    //touchPoint : タッチされた場所...左上0,0になっている為、yは反転させる
+    Point touchPoint = Vec2(touch->getLocationInView().x, WINDOW_TOP - touch->getLocationInView().y);
+    aaa->touchMoveEvent( touchPoint );
 }

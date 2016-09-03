@@ -11,18 +11,18 @@
 //================================================================================================
 //追加インクルード
 //================================================================================================
-
+#include "CardEffect.h"
 
 //================================================================================================
 //基底カードクラス
 //================================================================================================
 class CBaseCard : public cocos2d::Sprite{
-private:
+protected:
     //コンストラクタ
     CBaseCard();
     
     //デストラクタ
-    virtual ~CBaseCard();
+    ~CBaseCard();
     
     //初期化
     bool init() override;
@@ -46,17 +46,21 @@ public:
     //================================================================================================
     //メンバ変数 + メンバ関数追加
     //================================================================================================
+    //カードステータス
+    CCardStatus *m_pCardStatus = NULL;
+    
+    //カード効果
+    std::vector<CCardEffect*> *m_pCardEffect = NULL;
     
     //押された時のイベント
-    virtual bool touchBeganEvent() = 0;
+    virtual void touchBeganEvent( cocos2d::Point pos ) = 0;
     
     //離された時のイベント
-    virtual void touchReleaseEvent() = 0;
+    virtual void touchReleaseEvent( cocos2d::Point pos ) = 0;
     
     //動かされた時のイベント
-    virtual void touchMoveEvent() = 0;
+    virtual void touchMoveEvent( cocos2d::Point pos ) = 0;
     
     //キャンセル時のイベント
-    virtual void touchCancelEvent() = 0;
-    
+    virtual void touchCancelEvent( cocos2d::Point pos ) = 0;
 };

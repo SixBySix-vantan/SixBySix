@@ -22,13 +22,16 @@ class CStatus;
 //================================================================================================
 class CCardEffect{
 protected:
-    //ステータス
+    //カードステータスを受け取る変数
     CCardStatus* m_Status = NULL ;
     
 public:
     ~CCardEffect();
     
-    //カードの効果発動
+    /**
+     *  @desc   カードの効果発動
+     *  @param  カード効果を受ける相手のステータス
+     */
     virtual void runEffect( CStatus *pStatus ) = 0 ;
 };
 
@@ -44,7 +47,10 @@ public:
      */
     CPlayerAttackEffect( CCardStatus* pStatus );
     
-    
+    /**
+     *  @desc   カードの効果発動
+     *  @param  カード効果を受ける相手のステータス
+     */
     void runEffect( CStatus *pStatus ) override;
 };
 //================================================================================================
@@ -80,6 +86,10 @@ public:
      */
     CBuffEffect( CCardStatus* pStatus );
     
+    /**
+     *  @desc   カードの効果発動
+     *  @param  カード効果を受ける相手のステータス
+     */
     void runEffect( CStatus *pStatus ) override;
 };
 
@@ -95,6 +105,10 @@ public:
      */
     CDeBuffEffect( CCardStatus* pStatus );
     
+    /**
+     *  @desc   カードの効果発動
+     *  @param  カード効果を受ける相手のステータス
+     */
     void runEffect( CStatus *pStatus ) override ;
 };
 

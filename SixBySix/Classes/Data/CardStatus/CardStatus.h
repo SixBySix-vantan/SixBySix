@@ -9,19 +9,31 @@
 #pragma once
 
 class CCardStatus {
+protected:
     //プレイヤーへの攻撃力
-    int playerAtk;
+    int m_playerAtk;
     //オブジェクトへの攻撃力
-    int objectAtk;
-    //バフ
-    int buff;
-    //デバフ
-    int debuff;
+    int m_objectAtk;
+//    //バフ
+//    int buff;
+//    //デバフ
+//    int debuff;
     
 public:
-    //取得
+    //デフォルタコンストラクタ
+    CCardStatus();
+    
+    /**
+     *  @desc   引数付きコンストラクタ
+     *  @param  プレイヤー攻撃力
+     *  @param  オブジェクト攻撃力
+     */
+    CCardStatus( int playerAtk, int objectAtk );
+    
+    //プレイヤー攻撃力の取得
     int getPlayerAtk();
     
+    //オブジェクト攻撃力の取得
     int getObjectAtk();
     
 //public:

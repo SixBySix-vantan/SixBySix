@@ -38,8 +38,7 @@ private:
     
     //移動力
     //TODO:レンジできてから実装(enumで管理予定)
-
-public:
+    
     //対キャラクター攻撃力
     int m_playerAttack;
     
@@ -52,6 +51,13 @@ public:
 public:
     //ステータスの設定
     void set( int defaultPlayerAt, int defaultObjectAt, int maxHp );
+    
+    //現在のHPの取得
+    int getHp();
+    //現在の対プレイヤー攻撃力の取得
+    int getPlayerAttack();
+    //現在の対プレイヤー攻撃力の取得
+    int getObjectAttack();
     
     //HPの加算
     void addHp( int recoverPt );

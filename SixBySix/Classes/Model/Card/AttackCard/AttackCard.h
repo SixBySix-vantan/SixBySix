@@ -6,21 +6,58 @@
 //
 //
 
-#ifndef __SixBySix__AttackCard__
-#define __SixBySix__AttackCard__
+#pragma once
 
-#include <stdio.h>
+//================================================================================================
+//追加インクルード
+//================================================================================================
 #include "BaseCard.hpp"
 
-class AttackCard : public CBaseCard{
+//================================================================================================
+//攻撃カード
+//================================================================================================
+class CAttackCard : public CBaseCard{
+private:
+    //コンストラクタ
+    CAttackCard();
+    
+    //デストラクタ
+    ~CAttackCard();
+    
+    //初期化
+    bool init() override;
+    
 public:
-    ~AttackCard();
     
-    // こうか
-    //effect* m_pEffect = NULL ;
+    //インスタンス生成
+    static CAttackCard *create();
+    
+private:
+    //入場処理
+    virtual void onEnter() override;
+    
+    //退場
+    virtual void onExit() override;
+    
+    //更新処理
+    //virtual void update( float deltaTime ) override;
+    
+public:
+    //================================================================================================
+    //メンバ変数 + メンバ関数追加
+    //================================================================================================
     
     
+    //押された時のイベント
+    virtual void touchBeganEvent( cocos2d::Point pos ) override;
+    
+    //離された時のイベント
+    virtual void touchReleaseEvent( cocos2d::Point pos ) override;
+    
+    //動かされた時のイベント
+    virtual void touchMoveEvent( cocos2d::Point pos ) override;
+    
+    //キャンセル時のイベント
+    virtual void touchCancelEvent( cocos2d::Point pos ) override;
     
 };
-
-#endif /* defined(__SixBySix__AttackCard__) */

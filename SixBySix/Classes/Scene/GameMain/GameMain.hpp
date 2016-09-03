@@ -14,7 +14,8 @@
 
 
 
-
+//前方宣言
+class CPlayerCharacter;
 
 //================================================================================================
 //ゲームメインレイヤー
@@ -60,5 +61,12 @@ public:
     //テスト用変数
     int m_nam = 0;
     //_/_/_/_/_/_
+    
+    //発表用に追加
+    CPlayerCharacter *aaa = NULL;
+    bool beganTest( cocos2d::Touch* touch, cocos2d::Event* event );
+    void releaseTest( cocos2d::Touch* touch, cocos2d::Event* event );
+    void moveTest( cocos2d::Touch* touch, cocos2d::Event* event );
+
     
 };

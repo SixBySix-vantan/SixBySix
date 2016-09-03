@@ -45,6 +45,20 @@ void CStatus::set( int defaultPlayerAt, int defaultObjectAt, int maxHp ){
     this->m_hp = maxHp;
 }
 
+//現在のHPの取得
+int CStatus::getHp(){
+    return this->m_hp;
+}
+
+//現在の対プレイヤー攻撃力の取得
+int CStatus::getPlayerAttack(){
+    return this->m_playerAttack;
+}
+
+//現在の対プレイヤー攻撃力の取得
+int CStatus::getObjectAttack(){
+    return this->m_objectAttack;
+}
 
 //HPの足し算
 void CStatus::addHp( int recoverPt ){

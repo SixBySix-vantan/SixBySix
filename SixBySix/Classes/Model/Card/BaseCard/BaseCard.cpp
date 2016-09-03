@@ -67,4 +67,3 @@ void CBaseCard::onExit(){
 //更新処理
 void CBaseCard::update( float deltaTime ) {
 }
-

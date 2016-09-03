@@ -77,3 +77,12 @@ void CBaseCharacter::applyFunc(){
     //チップデータ反映
     this->setTextureRect( (*this->m_pAnimations)[this->m_state]->getCurrentChip() );
 }
+
+//状態確認
+void CBaseCharacter::checkState(){
+    
+    //HPが0以下ならば自身の生存フラグをfalseにする
+    if( this->m_pStatus->getHp() <= 0 ){
+        this->m_isAlive = false;
+    }
+}

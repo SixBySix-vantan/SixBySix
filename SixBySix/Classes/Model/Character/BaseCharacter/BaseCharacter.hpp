@@ -62,6 +62,9 @@ public:
     //位置情報
     CMove *m_pMove = NULL;
     
+    //生存フラグ
+    bool m_isAlive = false;
+    
     // 有効フラグ
     bool m_activeFlag = false;
     
@@ -70,6 +73,9 @@ public:
     
     //反映処理
     virtual void applyFunc();
+    
+    //状態確認
+    virtual void checkState();
     
     //押された時のイベント
     virtual void touchBeganEvent( cocos2d::Point pos ) = 0;
